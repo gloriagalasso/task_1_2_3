@@ -6,7 +6,7 @@
 |---|---|
 | Total (patent_id, focal_term) pairs | 790 |
 | Unique patents | 101 |
-| Unique focal term strings | 494 |
+| Unique focal terms | 494 |
 | Mean focal terms per patent | 7.82 |
 | Median focal terms per patent | 6.00 |
 | Std Dev | 6.83 |
