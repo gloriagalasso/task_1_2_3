@@ -20,30 +20,57 @@ The distribution is approximately bell-shaped and centred around 0.35, indicatin
 
 ---
 
-## Examples Illustrating Similarities and Differences
+## Cosine Similarity per Focal Term
 
-### High Similarity — Focal Terms Used in Similar Contexts
-
-| Focal Term | Patent ID | Similarity | Patent Context (sample) | Paper Context (sample) |
-|---|---|---|---|---|
-| `asbestos-related` | 8168398 | 0.843 | mesothelioma, presence, method, human, assaying | mesothelioma, cancer, disease, presence, asbestos |
-| `asbestos` | 8168398 | 0.820 | mesothelioma, presence, method, human, assaying | mesothelioma, cancer, enzyme-linked, presence |
-| `presence` | 8168398 | 0.801 | mesothelioma, assaying, concluded, increased | mesothelioma, cancer, disease, asbestos, normal |
-| `cocaine` | 8084204 | 0.792 | pocket, insoluble, release, indicator, method | pocket, insoluble, binding, ligand, selective |
-| `risk` | 8168398 | 0.784 | mesothelioma, presence, method, human, increased | mesothelioma, cancer, chemoprevention, decline |
-
-**Interpretation:** These focal terms belong to narrow, domain-specific topics (e.g. asbestos-related disease diagnosis). Patents and papers share a tight vocabulary, leading to high contextual alignment.
-
----
-
-### Low Similarity — Focal Terms Used in Different Contexts
-
-| Focal Term | Patent ID | Similarity | Patent Context (sample) | Paper Context (sample) |
-|---|---|---|---|---|
-| `first` | 7838242 | -0.008 | bacteria, listeria, delivery, method, release | insulin, hypoglycemia, pump, long-term, risk |
-| `second` | 7838242 | -0.006 | bacteria, listeria, delivery, method, release | insulin, hypoglycemia, pump, long-term, risk |
-| `group` | 7790843 | 0.010 | amino acid, sequence, 1-220, 221-454, seq | brain, cortex, morphometric, cerebral, region |
-| `group` | 7754703 | 0.024 | hydroxyl, aryl, carbon, fluorine, chemical | insulin, immunosuppression, release, potent |
-| `less` | 8052734 | 0.032 | width, hinge, expandable, sectional, mm | brachytherapy, stenting, intimal, clinical |
-
-**Interpretation:** Generic terms like `group`, `first`, `second`, and `less` carry very different meanings depending on context. When the patent and its cited paper belong to different sub-fields, even shared terms reflect divergent usage.
+| Patent ID | Focal Term | Cosine Similarity |
+|---|---|---|
+| 7662783 | alpha | 0.363 |
+| 7662783 | antagonist | 0.353 |
+| 7662783 | cell | 0.337 |
+| 7662783 | collagen | 0.365 |
+| 7662783 | colon | 0.374 |
+| 7662783 | effect | 0.258 |
+| 7662783 | effective | 0.324 |
+| 7662783 | growth | 0.378 |
+| 7662783 | lung | 0.350 |
+| 7662783 | melanoma | 0.370 |
+| 7662783 | peptide | 0.392 |
+| 7662783 | proliferation | 0.390 |
+| 7662783 | sequence | 0.147 |
+| 7662783 | skin | 0.348 |
+| 7662783 | treatment | 0.369 |
+| 7662783 | tumor | 0.372 |
+| 7700783 | agent | 0.173 |
+| 7700783 | hydroxyl | 0.276 |
+| 7704363 | and | 0.285 |
+| 7704363 | concentration | 0.433 |
+| 7704363 | maximum | 0.292 |
+| 7704363 | presence | 0.360 |
+| 7723513 | bis | 0.536 |
+| 7723513 | copper | 0.565 |
+| 7723513 | coupling | 0.572 |
+| 7723513 | dichloromethane | 0.421 |
+| 7723513 | dipyrrinato | 0.552 |
+| 7723513 | metal | 0.546 |
+| 7723513 | palladium | 0.587 |
+| 7723513 | reaction | 0.558 |
+| 7723513 | solvent | 0.398 |
+| 7723513 | toluene | 0.582 |
+| 7723513 | zinc | 0.594 |
+| 7741269 | exendin-4 | 0.379 |
+| 7741269 | peptide | 0.294 |
+| 7741269 | sequence | 0.255 |
+| 7741269 | treatment | 0.268 |
+| 7749408 | room | 0.340 |
+| 7754703 | aryl | 0.256 |
+| 7754703 | compound | 0.147 |
+| 7754703 | group | 0.024 |
+| 7754703 | phosphate | 0.101 |
+| 7754703 | phosphonate | 0.265 |
+| 7754860 | hormone | 0.418 |
+| 7754860 | mg | 0.427 |
+| 7754860 | recombinant | 0.409 |
+| 7754909 | solution | 0.349 |
+| 7766658 | diagnosis | 0.470 |
+| 7766658 | disease | 0.452 |
+| 7766658 | drug | 0.336 |
