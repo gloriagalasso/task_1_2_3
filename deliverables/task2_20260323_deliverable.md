@@ -27,9 +27,9 @@
 
 ## Distribution Plots
 
-Saved in `visualizations/`:
-- `histogram_focal_terms_20260323.png`
-- `density_focal_terms_20260323.png`
+![Histogram of Focal Terms per Patent](../visualizations/histogram_focal_terms_20260323.png)
+
+![Density Plot of Focal Terms per Patent](../visualizations/density_focal_terms_20260323.png)
 
 ---
 
