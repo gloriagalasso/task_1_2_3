@@ -19,7 +19,7 @@
 
 ## Distribution Plot
 
-![Histogram of Focal Terms per Patent](visualizations/histogram_focal_terms.png)
+![Histogram of Focal Terms per Patent](../visualizations/histogram_focal_terms.png)
 
 The histogram shows the number of focal terms per patent. The red dashed line marks the **mean (7.82)** and the orange dashed line marks the **median (6.00)**. The gap between mean and median confirms the distribution is **right-skewed** — a few patents with many focal terms pull the mean upward.
 
