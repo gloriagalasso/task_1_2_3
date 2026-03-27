@@ -19,7 +19,7 @@ For each focal term, a sentence embedding was computed for both its patent conte
 | Min | -0.109 |
 | Max | 0.795 |
 
-The distribution is approximately symmetric and centred around 0.38, indicating **moderate semantic alignment** between patent and paper usage on average. The std of 0.13 shows meaningful variation — some terms are used in very similar contexts, others in quite different ones.
+The distribution is approximately symmetric and centred around 0.38, indicating **moderate semantic alignment** between patent and paper usage on average. The std of 0.13 shows meaningful variation. Some terms are used in very similar contexts, others in quite different ones.
 
 ---
 
@@ -31,7 +31,7 @@ The distribution is approximately symmetric and centred around 0.38, indicating 
 
 ## Examples: Highest and Lowest Semantic Similarity
 
-### Top 5 — Focal Terms Used in Similar Contexts
+### Top Examples — Focal Terms Used in Similar Contexts
 
 **1. `vardenafil` (patent 8653051, sim = 0.795)**
 
@@ -40,7 +40,7 @@ The distribution is approximately symmetric and centred around 0.38, indicating 
 | **Patent** | dysfunction, short, burst, amount, subject, treatment, treat, male, activity |
 | **Paper** | sildenafil, tadalafil, 24weeks, phosphodiesterase-5 |
 
-Both contexts are tightly focused on erectile dysfunction pharmacology — the same class of drugs (PDE5 inhibitors) appears on both sides.
+Here I am a bit surprised about the similarity, honestly: although the two are clearly related, we can notice that papers use specific pharmacological terminology (e.g., sildenafil, tadalafil, PDE5 inhibitors), while patents rely on more generic clinical language.
 
 ---
 
@@ -62,7 +62,6 @@ Same patent, same clinical context. `tadalafil` and `vardenafil` are used interc
 | **Patent** | hbv, raltegravir, didanosine, zalcitabine, delavirdine, ca, day |
 | **Paper** | nevirapine, tenofovir, didanosine, lopinavir-ritonavir, antiretroviral, efavirenz, indinavir, ritonavir |
 
-Both are firmly in the antiretroviral drug domain — the surrounding terms are other HIV medications in both cases.
 
 ---
 
@@ -73,8 +72,6 @@ Both are firmly in the antiretroviral drug domain — the surrounding terms are 
 | **Patent** | endoglucanase, bleaching, cellobiohydrolase, activity, glucuronidase, pulp, ligninase, xylanase |
 | **Paper** | glucosidases, reesei, arabinofuranosidase, xylanases |
 
-A highly specific enzyme term — the surrounding vocabulary in both domains is the same narrow set of cellulolytic enzymes.
-
 ---
 
 **5. `glucono-δ-lactone` (patent 8703452, sim = 0.776)**
@@ -84,11 +81,20 @@ A highly specific enzyme term — the surrounding vocabulary in both domains is 
 | **Patent** | cellobiono-δ-lactone, lactonase, having, contacting, sequence, identity, activity |
 | **Paper** | lactonase, deconstruct |
 
-Niche biochemical term used in an identical enzymatic context on both sides.
 
 ---
 
-### Bottom 5 — Focal Terms Used in Different Contexts
+**6. `olanzapine` (patent 9675604, sim = 0.759)**
+
+| | Context (sample) |
+|---|---|
+| **Patent** | zotepine, risperidone, mg, sodium, gram, day |
+| **Paper** | risperidone |
+
+
+---
+
+### Bottom 5 — Focal Terms Used in Different Contexts -> They are all what I would call "stop words"
 
 **1. `known` (patent 7282727, sim = -0.109)**
 
